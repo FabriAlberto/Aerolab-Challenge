@@ -1,24 +1,28 @@
-import logo from './logo.svg';
+import Main from './Components/Items/Main';
 import './App.css';
+import Navbar from './Components/Navbar/Navbar';
+import UserContextProvider from './Context/UserContext';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import History from './Components/History/History';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+
+    <>
+      <UserContextProvider>
+       
+        <BrowserRouter>
+        <Navbar></Navbar>
+          <Routes>
+            {/* <Route path="/NotFound404" element={<NotFound></NotFound>}></Route> */}
+            <Route path="/" element={<Main/>} />
+            <Route path="/History" element={<History/>} />
+            <Route path='*' element={<Main/>}/>
+          </Routes>
+        </BrowserRouter>
+      </UserContextProvider>
+    </>
+
   );
 }
 
