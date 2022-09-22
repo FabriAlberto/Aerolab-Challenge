@@ -3,7 +3,7 @@ const HEADER = {
 	"Content-Type": "application/json",
 	Accept: "application/json",
 	/* Authorization: `Bearer ${import.meta.env.VITE_API_KEY}` */
-    Authorization: ''
+    Authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MmM1YWYzNTE0OTRiZTAwMjEwNGY3ODMiLCJpYXQiOjE2NTcxMjI2MTN9.JhgAC4lyPJ2NVVZ_aH7r7nhhycRbGOHRMCK7G8oG7JU'
 };
 
 const URL_API = "https://coding-challenge-api.aerolab.co";
